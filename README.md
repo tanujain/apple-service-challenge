@@ -1,6 +1,18 @@
 # apple-service-challenge
 
-The basic flow is: New user visits the website and registers, logs in with his username and password, credentials are validated at backend, the JSON Web token is generated which is valid for thirty minutes and set as a cookie on client end and makes a request internally to the rest API  to validate token, if validated the username is returned (fetched from token itself- no DB access) , user is greeted with its username and redirected to the greetings page, Finally, user can log out of his account.
+The basic flow of the application is: 
+
+New user visits the website and registers
+Logs in with his username and password
+credentials are validated at the backend
+the JSON Web token is generated which is valid for thirty minutes
+JWT sets as a cookie on the client browser 
+Makes a request internally to the rest API  to validate the token
+If validated the username is returned (fetched from token itself- no DB access) 
+The user is greeted with his username
+Redirected to the greetings page
+Finally, the user can log out of his account
+
 
 
 Build and Run Instructions:
