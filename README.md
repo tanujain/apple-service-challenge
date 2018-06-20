@@ -25,13 +25,14 @@ Finally, the user can log out of his account
 
 
 
+
 Build and Run Instructions:
 
 To run the Website:
 Python 3.4 is needed. All the packages in requirements.txt needs to be installed. follow the instruction in https://www.youtube.com/watch?v=kDRRtPO0YPA for setting up the server, creating the virtual environment and running the application code using gunicorn. Once done you will be able to access the website.
 
 To setup and run the API:
-php version>= 5 should be installed. Copy the contents of the API code folder to a folder in /var/www/html. go to that folder and run php -S localhost:81. This will run the api locally on port 81 which will be called by website. 
+php version>= 5 should be installed. Copy the contents of the API code folder to a folder in /var/www/html. Go to that folder and run php -S localhost:81. This will run the api locally on port 81 which will be called by website. (Live deployment is also done the same way and api and is hosted locally on the server. It is not accessible from outside.)
 
 To setup the database:
 create a database with database name, username and password as given in config.py file. Run the sql script given in the MySQL Script folder which will create the table with some data.
@@ -54,7 +55,7 @@ Register-> provide new user registration form (Username, Email, Password, Confir
 
 Greeting-> A validated user will reach this page after successful login. User credentials on the login page are validated with the entries in database. Once validated, a call is made to the greeting API with the generated token. API would validate the token and return json response.
 
-All the basic validations are added to the login and register forms. CSRF protection is also enabled. User input is passed as query parameter to prevent SQL injection. 
+All the basic validations are added to the login and register forms. field length checks, email validation etc have been added. CSRF protection is also enabled. User input is passed as query parameter to prevent SQL injection. XSS protection is there. Unauthorized access is also checked. No one can directly access the greetings page. Passwords stored in the database are hashed using the sha256 hashing algorithm rather than storing them in cleartext.
 
 2. Greeting API:
 
