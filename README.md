@@ -2,6 +2,17 @@
 
 Build and Run Instructions:
 
+To run the Website:
+Python 3.4 is needed. All the packages in requirements.txt needs to be installed. follow the instruction in https://www.youtube.com/watch?v=kDRRtPO0YPA for setting up the server, creating the virtual environment and running the application code using gunicorn. Once done you will be able to access the website.
+
+To setup and run the API:
+php version>= 5 should be installed. Copy the contents of the API code folder to a folder in /var/www/html. go to that folder and run php -S localhost:81. This will run the api locally on port 81 which will be called by website. 
+
+To setup the database:
+create a database with database name, username and password as given in config.py file. Run the sql script given in the MySQL Script folder which will create the table with some data.
+
+
+
 Technologies/Framework used and Functionality:
 
 1. Website Service: 
@@ -27,3 +38,5 @@ The API is written in PHP. It would take the input token, decode it using the se
 3. Database: 
 
 Mysql database is used to store the user information and all the database connection configuration is stored in config.py. Mysql is free and easy to use relational database. For now, there is only one existing table which stores the registered users information.
+
+Deployed Application: http://192.241.202.85/
