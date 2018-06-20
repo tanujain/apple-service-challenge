@@ -70,6 +70,3 @@ Basic Unit test cases are written in basictest.py file. In order to run them loc
 For testing the functionality of the whole application, it is deployed at the given below URL.
 
 URL: http://192.241.202.85/
-
-
-[![Alt text for your video](https://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](https://youtu.be/-8EtpLd5zzo)
