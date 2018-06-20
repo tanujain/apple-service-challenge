@@ -1,0 +1,46 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class=flashes>
+        {% for message in messages %}
+        <div>{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    {% for message in form.username.errors %}
+    <div>Username: {{ message }}</div>
+    {% endfor %}
+    {% for message in form.email.errors %}
+    <div>Email: {{ message }}</div>
+    {% endfor %}
+    {% for message in form.password.errors %}
+    <div>Password: {{ message }}</div>
+    {% endfor %}
+
+    <form method="POST">
+
+        <div class="inputfield">
+            {{form.username.label}}
+            {{form.username()}}
+        </div>
+        <div class="inputfield">
+            {{form.email.label}}
+            {{form.email()}}
+        </div>
+        <div class="inputfield">
+            {{form.password.label}}
+            {{form.password()}}
+        </div>
+        <div class="inputfield">
+            {{form.confirm.label}}
+            {{form.confirm()}}
+        </div>
+        {{ form.hidden_tag() }}
+        <button type="submit" value="register" name="register">Register</button>
+    </form>
+</div>
+{% endblock %}

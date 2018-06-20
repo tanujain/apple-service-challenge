@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>APPLE SERVICE CHALLENGE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block css %}{% endblock %}
+</head>
+<body class="container">
+    <h1>APPLE SERVICE CHALLENGE</h1>
+    <img class="applelogo" src="{{ url_for('static', filename='images/applelogo.jpg') }}" alt="apple logo" >
+    {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿{% extends "layout.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+<div class=flashes>
+    {% for message in messages %}
+    <div>{{ message }}</div>
+    {% endfor %}
+</div>
+    {% endif %}
+    {% endwith %}
+<div class="login"><a href='/login'>Login</a></div>
+<div class="register"><a href='/register'>Register</a></div>
+{% endblock %}
