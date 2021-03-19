@@ -25,7 +25,7 @@ graphviz==0.4.10
 identify==1.0.9
 idna==2.6
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 MarkupSafe==1.0
 mccabe==0.6.1
 multidict==4.3.1
