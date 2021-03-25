@@ -45,7 +45,7 @@ pyflakes==1.5.0
 PyJWT==1.6.4
 PyMySQL==0.8.1
 pyreadline==2.1
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.4
 setuptools==39.2.0
 six==1.11.0
