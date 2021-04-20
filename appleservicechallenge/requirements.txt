@@ -38,7 +38,7 @@ pluggy==0.6.0
 pox==0.2.3
 ppft==1.6.4.7.1
 pre-commit==0.16.3
-py==1.5.2
+py==1.10.0
 pycodestyle==2.3.1
 pycparser==2.18
 pyflakes==1.5.0
